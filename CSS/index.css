@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "나눔스퀘어B";
+  src: url(font/NanumSquareB.woff);
+}
+@font-face {
+  font-family: "나눔스퀘어L";
+  src: url(font/NanumSquareL.woff);
+}
+@font-face {
+  font-family: "나눔스퀘어R";
+  src: url(font/NanumSquareR.woff);
+}
+@font-face {
+  font-family: "Akashi";
+  src: url(font/akashi.ttf);
+}
+@font-face {
+  font-family: "Alex";
+  src: url(font/AlexBrush-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "나눔스퀘어B";
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+}
+.container nav {
+  background: #eee;
+  width: 100%;
+  height: 50px;
+}
+.container nav .upper-nav {
+  width: 80%;
+  margin: 0 auto;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container nav .upper-nav .logo-left .logo p {
+  font-family: "Alex";
+  font-weight: 900;
+  font-size: 25px;
+}
+.container nav .upper-nav .nav-right {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container nav .upper-nav .nav-right .side-menu {
+  font-size: 20px;
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */
