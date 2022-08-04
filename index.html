@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/index.css">
+  <link rel="stylesheet" href="CSS/weather-icons.min.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/6e4abe1f96.js" crossorigin="anonymous"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
+  <div class="container">
+    <nav>
+      <div class="upper-nav">
+        <div class="logo-left">
+          <div class="logo">
+            <p>VoidString</p>
+          </div>
+        </div>
+        <div class="nav-right">
+          <div class="time">
+            <span id="emot"></span> <span id="time">00:00:00</span>
+          </div>
+          <div class="side-menu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+
+
+
+  <!-- Scripts 영역 // src로 파일 분리할것 -->
+  <script src="JS/time.js"></script>
+
   
 </body>
+
 </html>
