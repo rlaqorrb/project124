@@ -26,19 +26,25 @@
   font-family: "나눔스퀘어B";
 }
 
+li {
+  list-style: none;
+}
+
 .container {
-  width: 100vw;
+  width: 99vw;
   min-height: 100vh;
+  overflow-x: hidden;
+  background: #111;
+  color: #bbbbbb;
 }
 .container nav {
-  background: #eee;
   width: 100%;
-  height: 50px;
+  height: 70px;
 }
 .container nav .upper-nav {
   width: 80%;
   margin: 0 auto;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,4 +63,105 @@
 .container nav .upper-nav .nav-right .side-menu {
   font-size: 20px;
   cursor: pointer;
+}
+.container .carousel-container {
+  width: 100%;
+  height: 90vh;
+}
+.container .carousel-container .swiper {
+  width: 100%;
+  height: 100%;
+}
+.container .carousel-container .swiper .swiper-wrapper .swiper-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container .carousel-container .swiper .swiper-wrapper .swiper-slide .swiper-content .title {
+  color: white;
+}
+.container .carousel-container .swiper .swiper-wrapper .swiper-slide .swiper-content .title h1 {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  font-size: 50px;
+}
+.container .carousel-container .swiper .swiper-wrapper .swiper-slide .swiper-content .title p {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 50%;
+  font-size: 20px;
+}
+.container .carousel-container .swiper .swiper-wrapper .s1 {
+  background-image: url(../img/genesis-main-keyvisual-gv60-main-hero-01-desktop-2560x900-kr.webp);
+}
+.container .carousel-container .swiper .swiper-wrapper .s2 {
+  background-image: url(../img/genesis-main-keyvisual-gv70-22my-main-hero-desktop-2560x900-1.webp);
+}
+.container .carousel-container .swiper .swiper-wrapper .s3 {
+  background-image: url(../img/genesis-main-keyvisual-g70-sb-main-hero-desktop-2560x900-2.jpg);
+}
+.container .contents {
+  width: 80%;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container .contents .title {
+  text-align: center;
+}
+.container .contents .main-contents .contents-list {
+  width: 45%;
+  min-height: 100vh;
+}
+.container .contents .main-contents .contents-list .contents-item {
+  display: flex;
+  justify-content: space-between;
+}
+.container .contents .main-contents .contents-list .contents-item > div {
+  width: 300px;
+  height: 300px;
+}
+.container .contents .main-contents .contents-list .contents-item .item-img .img {
+  height: 80%;
+  border: 1px solid white;
+}
+.container .contents .main-contents .contents-list .contents-item .item-img .link {
+  height: 20%;
+  border: 1px solid white;
+  position: relative;
+}
+.container .contents .main-contents .contents-list .contents-item .item-img .link > button {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #bbbbbb;
+  transition: all 0.5s;
+}
+.container .contents .main-contents .contents-list .contents-item .item-img .link .cover {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: white;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.container .contents .main-contents .contents-list .contents-item .item-img .link:hover button {
+  color: #000;
+}
+.container .contents .main-contents .contents-list .contents-item .item-img .link:hover .cover {
+  width: 100%;
+}
+.container .contents .main-contents .contents-list .contents-item .item-description p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  letter-spacing: 1px;
+  line-height: 20px;
+  text-align: center;
 }/*# sourceMappingURL=index.css.map */

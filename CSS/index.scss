@@ -23,6 +23,8 @@
   src: url(font/AlexBrush-Regular.ttf);
 }
 
+
+// 기본 스타일
 * {
   margin: 0;
   padding: 0;
@@ -30,26 +32,39 @@
   font-family: '나눔스퀘어B';
 }
 
+li {
+  list-style: none;
+}
+
+// 변수
+$txt-color : #bbbbbb;
+
+// 사이트
 .container {
-  width: 100vw;
+  width: 99vw;
   min-height: 100vh;
+  overflow-x: hidden;
+  background: #111;
+  color: $txt-color;
 
+  // 상단 네브바
   nav {
-    background: #eee;
+    // background: #eee;
     width: 100%;
-    height: 50px;
+    height: 70px;
 
+    // position: fixed;
     .upper-nav {
       width: 80%;
       margin: 0 auto;
-      height: 50px;
+      height: 70px;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
       .logo-left {
         .logo {
-          p{
+          p {
             font-family: 'Alex';
             font-weight: 900;
             font-size: 25px;
@@ -71,4 +86,145 @@
     }
 
   }
+
+  // 캐러셀
+  .carousel-container {
+    width: 100%;
+    height: 90vh;
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+
+      .swiper-wrapper {
+        .swiper-slide {
+          // overflow: hidden;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          .swiper-content {
+            .title {
+              color: white;
+
+
+              h1 {
+                position: absolute;
+                top: 30%;
+                left: 10%;
+                font-size: 50px;
+              }
+              p{
+                position: absolute;
+                top: 40%;
+                left: 10%;
+                width: 50%;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+
+        .s1 {
+          background-image: url(../img/genesis-main-keyvisual-gv60-main-hero-01-desktop-2560x900-kr.webp);
+        }
+
+        .s2 {
+          background-image: url(../img/genesis-main-keyvisual-gv70-22my-main-hero-desktop-2560x900-1.webp);
+        }
+
+        .s3 {
+          background-image: url(../img/genesis-main-keyvisual-g70-sb-main-hero-desktop-2560x900-2.jpg);
+        }
+      }
+    }
+  }
+
+  // 본 내용
+  .contents {
+    width: 80%;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+
+    .title {
+      text-align: center;
+
+    }
+
+    .main-contents {
+      .contents-list {
+        width: 45%;
+        min-height: 100vh;
+
+        .contents-item {
+          display: flex;
+          // border: 1px solid #eee;
+          justify-content: space-between;
+
+          >div {
+            width: 300px;
+            height: 300px;
+            // border: 1px solid white;
+          }
+
+          .item-img {
+            .img {
+              height: 80%;
+              border: 1px solid white;
+            }
+
+            .link {
+              height: 20%;
+              border: 1px solid white;
+              position: relative;
+
+              >button {
+                z-index: 1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                font-size: 18px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: $txt-color;
+                transition: all .5s;
+              }
+
+              .cover {
+                position: absolute;
+                width: 0%;
+                height: 100%;
+                background: white;
+                overflow: hidden;
+                transition: all .5s;
+              }
+            }
+
+            .link:hover {
+              button {
+                color: #000;
+              }
+
+              .cover {
+                width: 100%;
+              }
+            }
+          }
+
+          .item-description {
+            p {
+              position: relative;
+              top: 50%;
+              transform: translateY(-50%);
+              letter-spacing: 1px;
+              line-height: 20px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }

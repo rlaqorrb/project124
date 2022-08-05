@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
   <!-- CSS -->
   <link rel="stylesheet" href="CSS/index.css">
   <link rel="stylesheet" href="CSS/weather-icons.min.css">
@@ -14,12 +19,15 @@
   <script src="https://kit.fontawesome.com/6e4abe1f96.js" crossorigin="anonymous"></script>
 
   <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
   <div class="container">
+
+    <!-- 상단 네브바 -->
     <nav>
       <div class="upper-nav">
         <div class="logo-left">
@@ -38,14 +46,123 @@
       </div>
     </nav>
 
+    <!-- Carousel -->
+    <div class="carousel-container">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide s1">
+            <div class="swiper-content">
+              <div class="title">
+                <h1>Lorem</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus modi quas eaque sunt iure,
+                  ipsam rerum odio perferendis id asperiores quidem iste quaerat repellendus!</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide s2">
+            <div class="swiper-content">
+              <div class="title">
+                <h1>Lorem</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus modi quas eaque sunt iure,
+                  ipsam rerum odio perferendis id asperiores quidem iste quaerat repellendus!</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide s3">
+            <div class="swiper-content">
+              <div class="title">
+                <h1>Lorem</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus modi quas eaque sunt iure,
+                  ipsam rerum odio perferendis id asperiores quidem iste quaerat repellendus!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+    </div>
+    <!-- Contents -->
+    <div class="contents">
+      <div class="title">
+        <h1>제목</h1>
+      </div>
+      <div class="main-contents">
+        <ul class="contents-list">
+          <li class="contents-item">
+            <div class="item-img">
+              <div class="img">
+                <i class="fa-solid fa-user-nurse"></i>
+              </div>
+              <div class="link">
+                <button>1번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 
 
 
   <!-- Scripts 영역 // src로 파일 분리할것 -->
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      // direction: 'vertical',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      effect: 'creative',
+      creativeEffect: {
+        prev: {
+          // will set `translateZ(-400px)` on previous slides
+          translate: ['-100%', 0, 0],
+        },
+        next: {
+          // will set `translateX(100%)` on next slides
+          translate: ['100%', 0, -400],
+        },
+      },
+      autoplay: {
+        delay: 8000,
+      },
+    });
+  </script>
   <script src="JS/time.js"></script>
 
-  
-</body>
 
-</html>
+</body>
