@@ -23,6 +23,12 @@
   src: url(font/AlexBrush-Regular.ttf);
 }
 
+@font-face {
+  font-family: 'ostrich';
+  src: url(font/ostrich-regular.ttf);
+}
+
+// 기본 스타일
 * {
   margin: 0;
   padding: 0;
@@ -30,26 +36,40 @@
   font-family: '나눔스퀘어B';
 }
 
+li {
+  list-style: none;
+}
+
+// 변수
+$txt-color : #bbbbbb;
+
+// 사이트
 .container {
-  width: 100vw;
+  width: 99vw;
   min-height: 100vh;
+  overflow-x: hidden;
+  background: #111;
+  // background-image: url(../img/circle-scatter-haikei\ \(1\).svg);
+  color: $txt-color;
 
+  // 상단 네브바
   nav {
-    background: #eee;
+    // background: #eee;
     width: 100%;
-    height: 50px;
+    height: 70px;
 
+    // position: fixed;
     .upper-nav {
       width: 80%;
       margin: 0 auto;
-      height: 50px;
+      height: 70px;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
       .logo-left {
         .logo {
-          p{
+          p {
             font-family: 'Alex';
             font-weight: 900;
             font-size: 25px;
@@ -70,5 +90,264 @@
       }
     }
 
+  }
+
+  // 캐러셀
+  .carousel-container {
+    width: 100%;
+    height: 85vh;
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      cursor: grab;
+      .swiper-wrapper {
+        .swiper-slide {
+          // overflow: hidden;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          .swiper-content {
+            text-shadow: 0 0 5px black;
+            .title {
+              color: white;
+
+
+              h1 {
+                /* position: absolute;
+                top: 30%;
+                left: 10%; */
+                padding: 150px 0px 0px 150px;
+                font-size: 50px;
+              }
+              p{
+                /* position: absolute;
+                top: 40%;
+                left: 10%; */
+                padding: 50px 0px 0px 150px;
+                width: 50%;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+
+        .s1 {
+          background-image: url(../img/doctor-563428_1920.jpg);
+        }
+
+        .s2 {
+          background-image: url(../img/feline-corona-virus-5033326_1920.jpg);
+        }
+
+        .s3 {
+          background-image: url(../img/surgery-1822458_1920.jpg);
+        }
+      }
+    }
+    .swiper:active{
+      cursor: grabbing;
+    }
+  }
+  // 스크롤 안내
+  .scroll-down{
+    height: 10vh;
+    padding: 20px;
+    text-align: center;
+  }
+  // 본 내용
+  .contents {
+    width: 80%;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+
+    .title {
+      text-align: center;
+
+    }
+
+    .main-contents {
+      .contents-list {
+        width: 100%;
+        min-height: 100vh;
+
+
+        .contents-item:nth-child(odd){
+          .item-description{
+            margin-right: auto;
+            margin-left: 50px;
+          }
+        }
+        .contents-item:nth-child(even){
+          flex-direction: row-reverse;
+          margin-left: auto;
+          .item-description{
+            margin-left: auto;
+            margin-right: 50px;
+          }
+        }
+        .contents-item {
+          display: flex;
+          // border: 1px solid #eee;
+          justify-content: space-between;
+
+          >div {
+            width: 310px;
+            height: 310px;
+            // border: 1px solid white;
+          }
+
+          .item-img {
+            width: 20%;
+            background: #151515;
+            padding: 20px;
+            .img {
+              height: 80%;
+              // border: 1px solid white;
+              background-image: url(https://via.placeholder.com/100);
+            }
+
+            .link {
+              height: 20%;
+              border: 1px solid white;
+              position: relative;
+
+              >button {
+                z-index: 1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                font-size: 18px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: $txt-color;
+                transition: all .5s;
+              }
+
+              .cover {
+                position: absolute;
+                width: 0%;
+                height: 100%;
+                background: white;
+                overflow: hidden;
+                transition: all .5s;
+              }
+            }
+
+            .link:hover {
+              button {
+                color: #000;
+              }
+
+              .cover {
+                width: 100%;
+              }
+            }
+          }
+
+          .item-description {
+            width: 20%;
+            p {
+              position: relative;
+              top: 50%;
+              transform: translateY(-50%);
+              letter-spacing: 1px;
+              line-height: 20px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Footer
+  footer{
+    width: 100%;
+    margin-top: 30vh;
+    .others{
+      height: 90vh;
+      background: white;
+      color: black;
+      padding: 30px;
+      .others-title{
+        font-weight: 100;
+        text-align: center;
+        small{
+          font-family: 'ostrich';
+          font-size: 1.8rem;
+        }
+        h1{
+        font-family: 'ostrich';
+        font-size: 5.4rem;
+        font-weight: 100;
+        }
+      }
+      .project-container{
+        // border: 1px solid black;
+        width: 80%;
+        height: 70%;
+        margin: 0 auto;
+        display: flex;
+        .project{
+          padding: 50px;
+          width: 33%;
+          .project-img{
+            border: 1px solid black;
+            height: 60%;
+          }
+          .project-description{
+            // border: 1px solid black;
+            height: 40%;
+            text-align: center;
+            line-height: 30px;
+            h3{
+              margin: 20px 0;
+            }
+          }
+        }
+      }
+    }
+    .footer1{
+      height: 20vh;
+      background: #151515;
+      .footer1-container{
+        width: 80%;
+        padding: 30px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        div{
+          p{
+            padding: 5px 0;
+            text-align: center;
+          }
+          h3{
+            text-align: center;
+            color: white;
+          }
+        }
+      }
+    }
+    .footer2{
+      height: 20vh;
+      // background: #0066FF;
+      div{
+        position: relative;
+        color: white;
+        transform: translateY(-50%);
+        top: 40%;
+        h1{
+          font-family: 'Alex';
+          text-align: center;
+          font-size: 40px;
+        }
+        p{
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+    }
   }
 }

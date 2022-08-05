@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
   <!-- CSS -->
   <link rel="stylesheet" href="CSS/index.css">
   <link rel="stylesheet" href="CSS/weather-icons.min.css">
@@ -14,12 +19,17 @@
   <script src="https://kit.fontawesome.com/6e4abe1f96.js" crossorigin="anonymous"></script>
 
   <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
   <div class="container">
+
+    <!-- 상단 네브바 -->
     <nav>
       <div class="upper-nav">
         <div class="logo-left">
@@ -38,14 +48,398 @@
       </div>
     </nav>
 
+    <!-- Carousel -->
+    <div class="carousel-container">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide s1">
+            <div class="swiper-content">
+              <div class="title">
+                <h1>Lorem</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus modi quas eaque sunt iure,
+                  ipsam rerum odio perferendis id asperiores quidem iste quaerat repellendus!</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide s2">
+            <div class="swiper-content">
+              <div class="title">
+                <h1>Lorem</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus modi quas eaque sunt iure,
+                  ipsam rerum odio perferendis id asperiores quidem iste quaerat repellendus!</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide s3">
+            <div class="swiper-content">
+              <div class="title">
+                <h1>Lorem</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus modi quas eaque sunt iure,
+                  ipsam rerum odio perferendis id asperiores quidem iste quaerat repellendus!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+    </div>
+    <div class="scroll-down">
+      <h1><i class="fa-solid fa-angles-down"></i> Scroll Down</h1>
+    </div>
+    <!-- Contents -->
+    <div class="contents">
+      <div class="main-contents">
+        <ul class="contents-list">
+          <!-- 1st -->
+          <li class="contents-item" data-aos="fade-up">
+            <div class="item-img">
+              <div class="img">
+
+              </div>
+              <div class="link">
+                <button>1번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+          <!-- 2nd -->
+          <li class="contents-item" data-aos="fade-up">
+            <div class="item-img">
+              <div class="img">
+
+              </div>
+              <div class="link">
+                <button>2번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+          <!-- 3rd -->
+          <li class="contents-item" data-aos="fade-up">
+            <div class="item-img">
+              <div class="img">
+
+              </div>
+              <div class="link">
+                <button>3번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+          <!-- 4th -->
+          <li class="contents-item" data-aos="fade-up">
+            <div class="item-img">
+              <div class="img">
+
+              </div>
+              <div class="link">
+                <button>4번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+          <!-- 5th -->
+          <li class="contents-item" data-aos="fade-up">
+            <div class="item-img">
+              <div class="img">
+
+              </div>
+              <div class="link">
+                <button>5번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+          <!-- 6th -->
+          <li class="contents-item" data-aos="fade-up">
+            <div class="item-img">
+              <div class="img">
+
+              </div>
+              <div class="link">
+                <button>6번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+          <!-- 7th -->
+          <li class="contents-item" data-aos="fade-up">
+            <div class="item-img">
+              <div class="img">
+
+              </div>
+              <div class="link">
+                <button>7번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+          <!-- 8th -->
+          <li class="contents-item" data-aos="fade-up">
+            <div class="item-img">
+              <div class="img">
+
+              </div>
+              <div class="link">
+                <button>8번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+          <!-- 9th -->
+          <li class="contents-item" data-aos="fade-up">
+            <div class="item-img">
+              <div class="img">
+
+              </div>
+              <div class="link">
+                <button>9번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+          <!-- 10th -->
+          <li class="contents-item" data-aos="fade-up">
+            <div class="item-img">
+              <div class="img">
+
+              </div>
+              <div class="link">
+                <button>10번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+          <!-- 11th -->
+          <li class="contents-item" data-aos="fade-up">
+            <div class="item-img">
+              <div class="img">
+
+              </div>
+              <div class="link">
+                <button>11번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+          <!-- 12th -->
+          <li class="contents-item" data-aos="fade-up">
+            <div class="item-img">
+              <div class="img">
+
+              </div>
+              <div class="link">
+                <button>12번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+          <!-- 13th -->
+          <li class="contents-item" data-aos="fade-up">
+            <div class="item-img">
+              <div class="img">
+
+              </div>
+              <div class="link">
+                <button>13번째</button>
+                <div class="cover"></div>
+              </div>
+            </div>
+            <div class="item-description">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
+                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
+                quaerat.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <div class="others">
+        <div class="others-title">
+          <small>VoidString's</small>
+          <h1>Other Projects</h1>
+        </div>
+        <h1 style="text-align: center; margin-top: 70px;">다른 프로젝트</h1>
+        <div class="project-container">
+          <div class="project">
+            <div class="project-img">
+
+            </div>
+            <div class="project-description">
+              <h3>제목</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error assumenda impedit possimus architecto provident culpa, minus repellendus.</p>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-img">
+
+            </div>
+            <div class="project-description">
+              <h3>제목</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error assumenda impedit possimus architecto provident culpa, minus repellendus.</p>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-img">
+
+            </div>
+            <div class="project-description">
+              <h3>제목</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error assumenda impedit possimus architecto provident culpa, minus repellendus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer1">
+        <div class="footer1-container">
+          <div class="makers">
+            <h3>제작자</h3>
+            <p>김세은</p>
+            <p>김백규</p>
+          </div>
+          <div class="sitemap">
+            <h3>사이트맵</h3>
+            <p>사이트맵</p>
+          </div>
+          <div class="tech">
+            <h3>기술</h3>
+            <p>HTML5</p>
+            <p>CSS / SCSS</p>
+            <p>JavaScript / jQuery</p>
+          </div>
+        </div>
+        </div>
+      <div class="footer2">
+        <div>
+          <h1>VoidString</h1>
+          <p>© Copyright VoidString.</p>
+          <p>All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
   </div>
 
 
 
   <!-- Scripts 영역 // src로 파일 분리할것 -->
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      // direction: 'vertical',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      effect: 'creative',
+      creativeEffect: {
+        prev: {
+          // will set `translateZ(-400px)` on previous slides
+          translate: ['-100%', 0, 0],
+        },
+        next: {
+          // will set `translateX(100%)` on next slides
+          translate: ['100%', 0, -400],
+        },
+      },
+      autoplay: {
+        delay: 8000,
+      },
+    });
+  </script>
   <script src="JS/time.js"></script>
+  <!-- aos -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
-  
+
 </body>
-
-</html>

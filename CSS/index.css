@@ -19,6 +19,10 @@
   font-family: "Alex";
   src: url(font/AlexBrush-Regular.ttf);
 }
+@font-face {
+  font-family: "ostrich";
+  src: url(font/ostrich-regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -26,19 +30,25 @@
   font-family: "나눔스퀘어B";
 }
 
+li {
+  list-style: none;
+}
+
 .container {
-  width: 100vw;
+  width: 99vw;
   min-height: 100vh;
+  overflow-x: hidden;
+  background: #111;
+  color: #bbbbbb;
 }
 .container nav {
-  background: #eee;
   width: 100%;
-  height: 50px;
+  height: 70px;
 }
 .container nav .upper-nav {
   width: 80%;
   margin: 0 auto;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,4 +67,223 @@
 .container nav .upper-nav .nav-right .side-menu {
   font-size: 20px;
   cursor: pointer;
+}
+.container .carousel-container {
+  width: 100%;
+  height: 85vh;
+}
+.container .carousel-container .swiper {
+  width: 100%;
+  height: 100%;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.container .carousel-container .swiper .swiper-wrapper .swiper-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container .carousel-container .swiper .swiper-wrapper .swiper-slide .swiper-content {
+  text-shadow: 0 0 5px black;
+}
+.container .carousel-container .swiper .swiper-wrapper .swiper-slide .swiper-content .title {
+  color: white;
+}
+.container .carousel-container .swiper .swiper-wrapper .swiper-slide .swiper-content .title h1 {
+  /* position: absolute;
+  top: 30%;
+  left: 10%; */
+  padding: 150px 0px 0px 150px;
+  font-size: 50px;
+}
+.container .carousel-container .swiper .swiper-wrapper .swiper-slide .swiper-content .title p {
+  /* position: absolute;
+  top: 40%;
+  left: 10%; */
+  padding: 50px 0px 0px 150px;
+  width: 50%;
+  font-size: 20px;
+}
+.container .carousel-container .swiper .swiper-wrapper .s1 {
+  background-image: url(../img/doctor-563428_1920.jpg);
+}
+.container .carousel-container .swiper .swiper-wrapper .s2 {
+  background-image: url(../img/feline-corona-virus-5033326_1920.jpg);
+}
+.container .carousel-container .swiper .swiper-wrapper .s3 {
+  background-image: url(../img/surgery-1822458_1920.jpg);
+}
+.container .carousel-container .swiper:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.container .scroll-down {
+  height: 10vh;
+  padding: 20px;
+  text-align: center;
+}
+.container .contents {
+  width: 80%;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container .contents .title {
+  text-align: center;
+}
+.container .contents .main-contents .contents-list {
+  width: 100%;
+  min-height: 100vh;
+}
+.container .contents .main-contents .contents-list .contents-item:nth-child(odd) .item-description {
+  margin-right: auto;
+  margin-left: 50px;
+}
+.container .contents .main-contents .contents-list .contents-item:nth-child(even) {
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+.container .contents .main-contents .contents-list .contents-item:nth-child(even) .item-description {
+  margin-left: auto;
+  margin-right: 50px;
+}
+.container .contents .main-contents .contents-list .contents-item {
+  display: flex;
+  justify-content: space-between;
+}
+.container .contents .main-contents .contents-list .contents-item > div {
+  width: 310px;
+  height: 310px;
+}
+.container .contents .main-contents .contents-list .contents-item .item-img {
+  width: 20%;
+  background: #151515;
+  padding: 20px;
+}
+.container .contents .main-contents .contents-list .contents-item .item-img .img {
+  height: 80%;
+  background-image: url(https://via.placeholder.com/100);
+}
+.container .contents .main-contents .contents-list .contents-item .item-img .link {
+  height: 20%;
+  border: 1px solid white;
+  position: relative;
+}
+.container .contents .main-contents .contents-list .contents-item .item-img .link > button {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #bbbbbb;
+  transition: all 0.5s;
+}
+.container .contents .main-contents .contents-list .contents-item .item-img .link .cover {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: white;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.container .contents .main-contents .contents-list .contents-item .item-img .link:hover button {
+  color: #000;
+}
+.container .contents .main-contents .contents-list .contents-item .item-img .link:hover .cover {
+  width: 100%;
+}
+.container .contents .main-contents .contents-list .contents-item .item-description {
+  width: 20%;
+}
+.container .contents .main-contents .contents-list .contents-item .item-description p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  letter-spacing: 1px;
+  line-height: 20px;
+  text-align: center;
+}
+.container footer {
+  width: 100%;
+  margin-top: 30vh;
+}
+.container footer .others {
+  height: 90vh;
+  background: white;
+  color: black;
+  padding: 30px;
+}
+.container footer .others .others-title {
+  font-weight: 100;
+  text-align: center;
+}
+.container footer .others .others-title small {
+  font-family: "ostrich";
+  font-size: 1.8rem;
+}
+.container footer .others .others-title h1 {
+  font-family: "ostrich";
+  font-size: 5.4rem;
+  font-weight: 100;
+}
+.container footer .others .project-container {
+  width: 80%;
+  height: 70%;
+  margin: 0 auto;
+  display: flex;
+}
+.container footer .others .project-container .project {
+  padding: 50px;
+  width: 33%;
+}
+.container footer .others .project-container .project .project-img {
+  border: 1px solid black;
+  height: 60%;
+}
+.container footer .others .project-container .project .project-description {
+  height: 40%;
+  text-align: center;
+  line-height: 30px;
+}
+.container footer .others .project-container .project .project-description h3 {
+  margin: 20px 0;
+}
+.container footer .footer1 {
+  height: 20vh;
+  background: #151515;
+}
+.container footer .footer1 .footer1-container {
+  width: 80%;
+  padding: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.container footer .footer1 .footer1-container div p {
+  padding: 5px 0;
+  text-align: center;
+}
+.container footer .footer1 .footer1-container div h3 {
+  text-align: center;
+  color: white;
+}
+.container footer .footer2 {
+  height: 20vh;
+}
+.container footer .footer2 div {
+  position: relative;
+  color: white;
+  transform: translateY(-50%);
+  top: 40%;
+}
+.container footer .footer2 div h1 {
+  font-family: "Alex";
+  text-align: center;
+  font-size: 40px;
+}
+.container footer .footer2 div p {
+  text-align: center;
+  font-size: 14px;
 }/*# sourceMappingURL=index.css.map */
