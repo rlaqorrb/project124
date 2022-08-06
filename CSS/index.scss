@@ -57,6 +57,9 @@ $txt-color : #bbbbbb;
     // background: #eee;
     width: 100%;
     height: 70px;
+    position: fixed;
+    z-index: 2;
+    background: #111;
 
     // position: fixed;
     .upper-nav {
@@ -96,7 +99,9 @@ $txt-color : #bbbbbb;
   .carousel-container {
     width: 100%;
     height: 85vh;
-
+    position: relative;
+    margin-top: 70px;
+    z-index: 1;
     .swiper {
       width: 100%;
       height: 100%;
