@@ -29,6 +29,13 @@
 <body>
   <div class="container">
 
+    <!-- 메뉴 -->
+    <menu>
+      <div class="menu-container">
+        <h1>메뉴</h1>
+      </div>
+    </menu>
+
     <!-- 상단 네브바 -->
     <nav>
       <div class="upper-nav">
@@ -42,7 +49,11 @@
             <span id="emot"></span> <span id="time">00:00:00</span>
           </div>
           <div class="side-menu">
-            <i class="fa-solid fa-bars"></i>
+            <div class="span-container">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
           </div>
         </div>
       </div>
@@ -398,6 +409,17 @@
   <!-- Scripts 영역 // src로 파일 분리할것 -->
 
   <script>
+    $('.span-container').on('click', function () {
+      $('menu').toggleClass('show');
+      $('.bar').eq(0).toggleClass('bar-show1');
+      $('.bar').eq(1).toggleClass('bar-show2');
+      $('.bar').eq(2).toggleClass('bar-show3');
+      $('.logo').toggleClass('logo-show');
+      $('.time').toggleClass('time-show');
+    })
+
+
+
     const swiper = new Swiper('.swiper', {
       // Optional parameters
       // direction: 'vertical',
