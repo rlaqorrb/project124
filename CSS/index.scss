@@ -52,18 +52,50 @@ $txt-color : #bbbbbb;
   // background-image: url(../img/circle-scatter-haikei\ \(1\).svg);
   color: $txt-color;
 
+  // 메뉴
+  menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 70px;
+    left: 0;
+    background: #111;
+    z-index: 3;
+    // visibility: hidden;
+    // opacity: 0;
+    transition: all .2s;
+    transform: translateY(-100vh);
+    .menu-container{
+      margin: 50px;
+      padding: 50px;
+      border-top: 1px solid #eee;
+      h1{
+        text-align: center;
+        color: white;
+      }
+    }
+  }
+
+  // JS
+  .show{
+    // visibility: visible;
+    // opacity: 1;
+    transform: translateY(0);
+  }
+
+
   // 상단 네브바
   nav {
     // background: #eee;
     width: 100%;
     height: 70px;
     position: fixed;
-    z-index: 2;
+    z-index: 1000;
     background: #111;
 
     // position: fixed;
     .upper-nav {
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
       height: 70px;
       display: flex;
@@ -72,10 +104,36 @@ $txt-color : #bbbbbb;
 
       .logo-left {
         .logo {
+          transition: all .5s;
           p {
             font-family: 'Alex';
             font-weight: 900;
             font-size: 25px;
+            color: white;
+          }
+        }
+        // JS
+        .logo-show{
+          position: absolute;
+          left: 50%;
+          // transform: translateX(-50%);
+          animation-name: logo;
+          animation-duration: 1.5s;
+          transform: translateX(-50%);
+          p{
+            font-size: 50px;
+          }
+
+          @keyframes logo{
+            0%{
+              transform: translateX(-1000%) skew(90deg);
+            }
+            50%{
+              transform: translateX(0%) skew(-15deg);
+            }
+            100%{
+              transform: translateX(-50%) skew(0deg);
+            }
           }
         }
       }
@@ -85,10 +143,68 @@ $txt-color : #bbbbbb;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        .time{
+          transition: all .5s;
+        }
+        // js
+        .time-show{
+          visibility: hidden;
+          opacity: 0;
+        }
         .side-menu {
           font-size: 20px;
           cursor: pointer;
+
+          .span-container {
+            width: 25px;
+            /* background: gray; */
+            display: flex;
+            flex-direction: column;
+            // border: 1px solid white;
+            position: relative;
+            .bar {
+              display: inline-block;
+              width: 25px;
+              height: 2px;
+              background: $txt-color;
+              border-radius: 5px;
+              margin-top: 5px;
+              transition: all .5s;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+  
+            .bar:nth-child(1) {
+              position: relative;
+              margin-top: 0;
+            }
+  
+            .bar:nth-child(2) {
+              position: relative;
+              transition: all .3s;
+            }
+  
+            .bar:nth-child(3) {
+              position: relative;
+            }
+  
+            .bar-show1 {
+              transform: rotate(45deg) translateY(15px) translateX(-5px);
+            }
+  
+            .bar-show2 {
+              transform: translateX(-40px);
+              visibility: hidden;
+              opacity: 0;
+            }
+  
+            .bar-show3 {
+              transform: rotate(-45deg) translateY(-15px) translateX(-5px);
+            }
+          }
+
+
         }
       }
     }
@@ -102,10 +218,12 @@ $txt-color : #bbbbbb;
     position: relative;
     margin-top: 70px;
     z-index: 1;
+
     .swiper {
       width: 100%;
       height: 100%;
       cursor: grab;
+
       .swiper-wrapper {
         .swiper-slide {
           // overflow: hidden;
@@ -114,6 +232,7 @@ $txt-color : #bbbbbb;
 
           .swiper-content {
             text-shadow: 0 0 5px black;
+
             .title {
               color: white;
 
@@ -125,7 +244,8 @@ $txt-color : #bbbbbb;
                 padding: 150px 0px 0px 150px;
                 font-size: 50px;
               }
-              p{
+
+              p {
                 /* position: absolute;
                 top: 40%;
                 left: 10%; */
@@ -150,16 +270,19 @@ $txt-color : #bbbbbb;
         }
       }
     }
-    .swiper:active{
+
+    .swiper:active {
       cursor: grabbing;
     }
   }
+
   // 스크롤 안내
-  .scroll-down{
+  .scroll-down {
     height: 10vh;
     padding: 20px;
     text-align: center;
   }
+
   // 본 내용
   .contents {
     width: 80%;
@@ -178,20 +301,23 @@ $txt-color : #bbbbbb;
         min-height: 100vh;
         // background-image: url(../img/polygon-scatter-haikei\ \(1\).svg);
 
-        .contents-item:nth-child(odd){
-          .item-description{
+        .contents-item:nth-child(odd) {
+          .item-description {
             margin-right: auto;
             margin-left: 50px;
           }
         }
-        .contents-item:nth-child(even){
+
+        .contents-item:nth-child(even) {
           flex-direction: row-reverse;
           margin-left: auto;
-          .item-description{
+
+          .item-description {
             margin-left: auto;
             margin-right: 50px;
           }
         }
+
         .contents-item {
           display: flex;
           // border: 1px solid #eee;
@@ -207,6 +333,7 @@ $txt-color : #bbbbbb;
             width: 20%;
             background: #151515;
             padding: 20px;
+
             .img {
               height: 80%;
               // border: 1px solid white;
@@ -254,6 +381,7 @@ $txt-color : #bbbbbb;
 
           .item-description {
             width: 20%;
+
             p {
               position: relative;
               top: 50%;
@@ -267,88 +395,106 @@ $txt-color : #bbbbbb;
       }
     }
   }
+
   // Footer
-  footer{
+  footer {
     width: 100%;
     margin-top: 30vh;
-    .others{
+
+    .others {
       height: 90vh;
       background: white;
       color: black;
       padding: 30px;
-      .others-title{
+
+      .others-title {
         font-weight: 100;
         text-align: center;
-        small{
+
+        small {
           font-family: 'ostrich';
           font-size: 1.8rem;
         }
-        h1{
-        font-family: 'ostrich';
-        font-size: 5.4rem;
-        font-weight: 100;
+
+        h1 {
+          font-family: 'ostrich';
+          font-size: 5.4rem;
+          font-weight: 100;
         }
       }
-      .project-container{
+
+      .project-container {
         // border: 1px solid black;
         width: 80%;
         height: 70%;
         margin: 0 auto;
         display: flex;
-        .project{
+
+        .project {
           padding: 50px;
           width: 33%;
-          .project-img{
+
+          .project-img {
             border: 1px solid black;
             height: 60%;
           }
-          .project-description{
+
+          .project-description {
             // border: 1px solid black;
             height: 40%;
             text-align: center;
             line-height: 30px;
-            h3{
+
+            h3 {
               margin: 20px 0;
             }
           }
         }
       }
     }
-    .footer1{
+
+    .footer1 {
       height: 20vh;
       background: #151515;
-      .footer1-container{
+
+      .footer1-container {
         width: 80%;
         padding: 30px;
         margin: 0 auto;
         display: flex;
         justify-content: space-around;
-        div{
-          p{
+
+        div {
+          p {
             padding: 5px 0;
             text-align: center;
           }
-          h3{
+
+          h3 {
             text-align: center;
             color: white;
           }
         }
       }
     }
-    .footer2{
+
+    .footer2 {
       height: 20vh;
+
       // background: #0066FF;
-      div{
+      div {
         position: relative;
         color: white;
         transform: translateY(-50%);
         top: 40%;
-        h1{
+
+        h1 {
           font-family: 'Alex';
           text-align: center;
           font-size: 40px;
         }
-        p{
+
+        p {
           text-align: center;
           font-size: 14px;
         }
