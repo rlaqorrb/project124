@@ -29,6 +29,13 @@
 <body>
   <div class="container">
 
+    <!-- 메뉴 -->
+    <menu>
+      <div class="menu-container">
+        <h1>메뉴</h1>
+      </div>
+    </menu>
+
     <!-- 상단 네브바 -->
     <nav>
       <div class="upper-nav">
@@ -42,7 +49,11 @@
             <span id="emot"></span> <span id="time">00:00:00</span>
           </div>
           <div class="side-menu">
-            <i class="fa-solid fa-bars"></i>
+            <div class="span-container">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
           </div>
         </div>
       </div>
@@ -108,14 +119,13 @@
 
               </div>
               <div class="link">
-                <button>1번째</button>
+                <button>1. 가정전문간호사</button>
                 <div class="cover"></div>
               </div>
             </div>
             <div class="item-description">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo iusto cum unde minus at
-                aut dolore nihil cumque, quo corporis quam voluptas laborum accusantium. Sunt, quasi? Provident, eius
-                quaerat.</p>
+              <p>가정간호사는 환자가 있는 가정에 방문하여 조사 및 심사를 통해 가정간호 계획을 수립하고 간호를 제공한다. 활동 영역은 병원, 보건소, 장기요양기관, 건강보험공단 등 지역사회 분야에서 핵심적인 역할을 할 수가 있다.
+                특히, 의료기관 가정간호사업은 병원 퇴원환자를 포함해 거동이 불편한 만성질환자 및 노인, 장애인의 가정을 방문하여 전문적인 의료서비스를 제공하기도 한다.</p>
             </div>
           </li>
           <!-- 2nd -->
@@ -398,6 +408,17 @@
   <!-- Scripts 영역 // src로 파일 분리할것 -->
 
   <script>
+    $('.span-container').on('click', function () {
+      $('menu').toggleClass('show');
+      $('.bar').eq(0).toggleClass('bar-show1');
+      $('.bar').eq(1).toggleClass('bar-show2');
+      $('.bar').eq(2).toggleClass('bar-show3');
+      $('.logo').toggleClass('logo-show');
+      $('.time').toggleClass('time-show');
+    })
+
+
+
     const swiper = new Swiper('.swiper', {
       // Optional parameters
       // direction: 'vertical',
