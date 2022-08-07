@@ -259,14 +259,17 @@ $txt-color : #bbbbbb;
 
         .s1 {
           background-image: url(../img/doctor-563428_1920.jpg);
+          
         }
 
         .s2 {
           background-image: url(../img/feline-corona-virus-5033326_1920.jpg);
+          
         }
 
         .s3 {
           background-image: url(../img/surgery-1822458_1920.jpg);
+          
         }
       }
     }
@@ -322,6 +325,7 @@ $txt-color : #bbbbbb;
           display: flex;
           // border: 1px solid #eee;
           justify-content: space-between;
+          
 
           >div {
             width: 310px;
