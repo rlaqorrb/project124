@@ -219,13 +219,21 @@ li {
   font-size: 20px;
 }
 .container .carousel-container .swiper .swiper-wrapper .s1 {
-  background-image: url(../img/doctor-563428_1920.jpg);
+  background-image: url(../img/나이팅게일7.png);
 }
 .container .carousel-container .swiper .swiper-wrapper .s2 {
-  background-image: url(../img/feline-corona-virus-5033326_1920.jpg);
+  background-image: url(../img/나이팅게일8.png);
 }
 .container .carousel-container .swiper .swiper-wrapper .s3 {
-  background-image: url(../img/surgery-1822458_1920.jpg);
+  background-image: url(../img/나이팅게일5.png);
+  background-position: 0px -90px;
+}
+.container .carousel-container .swiper .swiper-wrapper .s4 {
+  background-image: url(../img/나이팅게일4.png);
+  filter: blur(250);
+}
+.container .carousel-container .swiper .swiper-pagination {
+  --swiper-theme-color: #000;
 }
 .container .carousel-container .swiper:active {
   cursor: -webkit-grabbing;
@@ -237,8 +245,7 @@ li {
   text-align: center;
 }
 .container .contents {
-  width: 80%;
-  margin-top: 50px;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -246,7 +253,9 @@ li {
   text-align: center;
 }
 .container .contents .main-contents .contents-list {
-  width: 100%;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
   min-height: 100vh;
 }
 .container .contents .main-contents .contents-list .contents-item:nth-child(odd) .item-description {

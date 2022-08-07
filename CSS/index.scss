@@ -258,16 +258,30 @@ $txt-color : #bbbbbb;
         }
 
         .s1 {
-          background-image: url(../img/doctor-563428_1920.jpg);
+          background-image: url(../img/나이팅게일7.png);
+          // background-position: 0px -400px;
         }
 
         .s2 {
-          background-image: url(../img/feline-corona-virus-5033326_1920.jpg);
+          background-image: url(../img/나이팅게일8.png);
+          
         }
 
         .s3 {
-          background-image: url(../img/surgery-1822458_1920.jpg);
+          background-image: url(../img/나이팅게일5.png);
+          background-position: 0px -90px;
+          
         }
+        .s4 {
+          background-image: url(../img/나이팅게일4.png);
+          filter: blur(250);
+          
+          
+        }
+      }
+
+      .swiper-pagination{
+        --swiper-theme-color : #000;
       }
     }
 
@@ -285,19 +299,23 @@ $txt-color : #bbbbbb;
 
   // 본 내용
   .contents {
-    width: 80%;
-    margin-top: 50px;
+    width: 100%;
+    // margin-top: 50px;
     margin-right: auto;
     margin-left: auto;
-
+    
     .title {
       text-align: center;
-
+      
     }
-
+    
     .main-contents {
+      // background: rgb(17,17,17);
+      // background: linear-gradient(140deg, rgba(17,17,17,1) 0%, rgba(68,49,65,1) 20%, rgba(138,80,95,1) 40%, rgba(205,120,102,1) 60%, rgba(246,177,98,1) 80%, rgba(249,248,113,1) 100%);
       .contents-list {
-        width: 100%;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
         min-height: 100vh;
         // background-image: url(../img/polygon-scatter-haikei\ \(1\).svg);
 
@@ -322,6 +340,7 @@ $txt-color : #bbbbbb;
           display: flex;
           // border: 1px solid #eee;
           justify-content: space-between;
+          
 
           >div {
             width: 310px;
