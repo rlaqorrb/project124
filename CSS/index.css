@@ -38,8 +38,8 @@ li {
   width: 99vw;
   min-height: 100vh;
   overflow-x: hidden;
-  background: #111;
-  color: #bbbbbb;
+  background: whitesmoke;
+  color: #111;
 }
 .container menu {
   position: fixed;
@@ -47,7 +47,7 @@ li {
   height: 100%;
   top: 70px;
   left: 0;
-  background: #111;
+  background: #fff;
   z-index: 3;
   transition: all 0.2s;
   transform: translateY(-100vh);
@@ -59,7 +59,7 @@ li {
 }
 .container menu .menu-container h1 {
   text-align: center;
-  color: white;
+  color: #111;
 }
 .container .show {
   transform: translateY(0);
@@ -69,7 +69,7 @@ li {
   height: 70px;
   position: fixed;
   z-index: 1000;
-  background: #111;
+  background: #fff;
 }
 .container nav .upper-nav {
   width: 90%;
@@ -86,7 +86,7 @@ li {
   font-family: "Alex";
   font-weight: 900;
   font-size: 25px;
-  color: white;
+  color: #111;
 }
 .container nav .upper-nav .logo-left .logo-show {
   position: absolute;
@@ -150,7 +150,7 @@ li {
   display: inline-block;
   width: 25px;
   height: 2px;
-  background: #bbbbbb;
+  background: #111;
   border-radius: 5px;
   margin-top: 5px;
   transition: all 0.5s;
@@ -280,15 +280,17 @@ li {
 }
 .container .contents .main-contents .contents-list .contents-item .item-img {
   width: 20%;
-  background: #151515;
+  background: #ddd;
   padding: 20px;
+  border-radius: 15px;
 }
 .container .contents .main-contents .contents-list .contents-item .item-img .img {
   height: 80%;
 }
 .container .contents .main-contents .contents-list .contents-item .item-img .link {
   height: 20%;
-  border: 1px solid white;
+  border: 1px solid #111;
+  border-radius: 5px;
   position: relative;
 }
 .container .contents .main-contents .contents-list .contents-item .item-img .link > button {
@@ -300,25 +302,25 @@ li {
   background: none;
   border: none;
   cursor: pointer;
-  color: #bbbbbb;
+  color: #111;
   transition: all 0.5s;
 }
 .container .contents .main-contents .contents-list .contents-item .item-img .link .cover {
   position: absolute;
   width: 0%;
   height: 100%;
-  background: white;
+  background: #111;
   overflow: hidden;
   transition: all 0.5s;
 }
 .container .contents .main-contents .contents-list .contents-item .item-img .link:hover button {
-  color: #000;
+  color: #fff;
 }
 .container .contents .main-contents .contents-list .contents-item .item-img .link:hover .cover {
   width: 100%;
 }
 .container .contents .main-contents .contents-list .contents-item .item-description {
-  width: 20%;
+  width: 30%;
 }
 .container .contents .main-contents .contents-list .contents-item .item-description p {
   position: relative;
@@ -327,6 +329,7 @@ li {
   letter-spacing: 1px;
   line-height: 20px;
   text-align: center;
+  font-size: 19px;
 }
 .container footer {
   width: 100%;
@@ -334,8 +337,8 @@ li {
 }
 .container footer .others {
   height: 90vh;
-  background: white;
-  color: black;
+  background: #fff;
+  color: #111;
   padding: 30px;
 }
 .container footer .others .others-title {
@@ -362,7 +365,7 @@ li {
   width: 33%;
 }
 .container footer .others .project-container .project .project-img {
-  border: 1px solid black;
+  border: 1px solid #111;
   height: 60%;
 }
 .container footer .others .project-container .project .project-description {
@@ -375,7 +378,8 @@ li {
 }
 .container footer .footer1 {
   height: 20vh;
-  background: #151515;
+  background: #111;
+  color: #fff;
 }
 .container footer .footer1 .footer1-container {
   width: 80%;
@@ -390,14 +394,13 @@ li {
 }
 .container footer .footer1 .footer1-container div h3 {
   text-align: center;
-  color: white;
 }
 .container footer .footer2 {
   height: 20vh;
 }
 .container footer .footer2 div {
   position: relative;
-  color: white;
+  color: #111;
   transform: translateY(-50%);
   top: 40%;
 }
